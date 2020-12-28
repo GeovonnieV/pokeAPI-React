@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, {useState} from "react"
 import './App.css';
+import API from "./components/API"
+
 
 function App() {
+  // empty array to set numerous pokemon
+  const [pokemon, setPokemon] = useState(["lettuce","tomato"])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World part five thousand</h1>
+      <API pokemon={pokemon} setPokemon={setPokemon} />
     </div>
   );
 }
